@@ -1,14 +1,15 @@
 using System;
 using LLDB.Models;
+using LLDB.Repos;
 using System.Collections.Generic;
 
 namespace LLLib
 {
-    public class PracticeService
+    public class PracticeService : IPracticeService
     {
         private IPracticeRepo repo;
 
-        public ParentService(IPracticeRepo repo) {
+        public PracticeService(IPracticeRepo repo) {
             this.repo = repo;
         }
 
@@ -24,7 +25,7 @@ namespace LLLib
              repo.DeletePractice(practice);
          }
 
-         public List<Practice> GetAllPracticesByTeamId() {
+         public List<Practice> GetAllPracticesByTeamId(int id) {
              List<Practice> practice = repo.GetAllPracticesByTeamId();
              return practice;
          }

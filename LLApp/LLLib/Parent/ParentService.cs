@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace LLLib
 {
-    public class ParentService
+    public class ParentService : IParentService
     {
         private IParentRepo repo;
 
@@ -30,10 +30,10 @@ namespace LLLib
              return parent;
          }
 
-         public List<Parent> GetAllParentsByChildId(ints id) {
+         public List<Parent> GetAllParentsByChildId(int id) {
              List<Parent> parent = repo.GetAllParentsByChildId();
              return parent;
-         }   
-   
+         }
+
     }
 }

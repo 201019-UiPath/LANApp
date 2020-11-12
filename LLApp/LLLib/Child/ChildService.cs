@@ -5,7 +5,7 @@ using LLDB.Repos;
 
 namespace LLLib
 {
-    public class ChildService
+    public class ChildService : IChildService
     {
         private IChildRepo repo;
 

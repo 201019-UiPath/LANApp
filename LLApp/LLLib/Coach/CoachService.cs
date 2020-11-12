@@ -1,6 +1,6 @@
 namespace LLLib
 {
-    public class CoachService
+    public class CoachService : ICoachService
     {
         private ICoahcRepo repo;
 

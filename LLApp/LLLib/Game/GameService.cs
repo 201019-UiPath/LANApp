@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace LLLib
 {
-    public class GameService
+    public class GameService : IGameService
     {
         private IGameRepo repo;
 

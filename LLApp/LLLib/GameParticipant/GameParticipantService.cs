@@ -1,10 +1,10 @@
 namespace LLLib
 {
-    public class GameParticipant
+    public class GameParticipant : IGameParticipantService
     {
         private IGameParticipantRepo repo;
 
-        public CoachService(IGameParticipantRepo repo) {
+        public GameParticipant(IGameParticipantRepo repo) {
             this.repo = repo;
         }
 

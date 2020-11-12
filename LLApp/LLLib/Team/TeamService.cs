@@ -1,14 +1,15 @@
 using System;
 using LLDB.Models;
+using LLDB.Repos;
 using System.Collections.Generic;
 
 namespace LLLib
 {
-    public class TeamService
+    public class TeamService : ITeamService
     {
         private ITeamRepo repo;
 
-        public ParentService(ITeamRepo repo) {
+        public TeamService(ITeamRepo repo) {
             this.repo = repo;
         }
 
