@@ -19,14 +19,18 @@ function GetAllParents() {
             let emailCell = row.insertCell(2);
             emailCell.innerHTML = result[i].emailAddress;
 
-            let addCell = row.insertCell(5);
+            let addCell = row.insertCell(3);
             let btn = document.createElement('input');
             btn.type = 'button';
             btn.id = result[i].id;
-            btn.value = 'Add to Cart';
+            btn.value = 'Select';
 
-            
-        
+            btn.onclick = function GetKids() {
+                window.location = "ParentDetails.html";
+            }      
+
+            addCell.appendChild(btn);
+
         }
     });
 }
