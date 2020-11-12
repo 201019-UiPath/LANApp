@@ -38,7 +38,12 @@ namespace LLLib
          public List<Child> GetAllChildrenByTeamId(int id) {
              List<Child> child = repo.GetAllChildrenByTeamId(id);
              return child;
-         }   
+         }
+
+         public List<Child> GetAllChildrenByParentId(int id) {
+             List<Child> child = repo.GetAllChildrenByParentId(id);
+             return child;
+         }
 
     }
 }

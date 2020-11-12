@@ -12,5 +12,6 @@ namespace LLLib
          List<Child> GetAllChildren();
          Child GetChildByTeamId(int id);
          List<Child> GetAllChildrenByTeamId(int id);
+         List<Child> GetAllChildrenByParentId(int id);
     }
 }
