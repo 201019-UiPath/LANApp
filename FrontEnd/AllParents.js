@@ -1,22 +1,23 @@
 function GetAllParents() {
-    fetch('https://localhost:44331/get/')
+    fetch('https://localhost:44331/parent/get/')
     .then(response => response.json())
     .then(result => {
-            document.querySelectorAll('#parents tbody tr').forEach(element => element.remove())
-            let table = document.querySelectorAll('#parents tbody');
-            for (let p = 0; p < result.length; ++p) {
-                let row = table.insertRow(table.rows.length);
+        document.querySelectorAll('#parents tbody tr').forEach(element => element.remove());
+        let table = document.querySelectorAll('#parents tbody');
 
-                let pnCell = row.insertCell(0);
-                pnCell.innerHTML = result[p].parentName;
+        for (let p = 0; p < result.length; ++p) {
+            let row = table.insertRow(table.rows.length);
 
-                let pCell = row.insertCell(1);
-                pCell.innerHTML = result[p].phoneNumber;
+            let pnCell = row.insertCell(0);
+            pnCell.innerHTML = result[p].parentName;
 
-                let eCell = row.insertCell(2);
-                eCell.innerHTML = result[p].email;
-            }
-        });
+            let pCell = row.insertCell(1);
+            pCell.innerHTML = result[p].phoneNumber;
+
+            let eCell = row.insertCell(2);
+            eCell.innerHTML = result[p].email;
+        }
+    });
 }
 
 function AddParent()
