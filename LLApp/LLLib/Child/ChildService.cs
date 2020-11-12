@@ -11,15 +11,15 @@ namespace LLLib
         }
 
         public void AddChild(Child child) {
-            repo.AddBook(child);
+            repo.AddChild(child);
         }
 
         public void UpdateChild(Child child) {
-             repo.UpdateBook(child);
+             repo.UpdateChild(child);
          }
 
          public void DeleteChild(Child child) {
-             repo.DeleteBook(child);
+             repo.DeleteChild(child);
          }
 
          public List<Child> GetAllChildren() {
