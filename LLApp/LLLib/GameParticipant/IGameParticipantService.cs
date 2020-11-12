@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using LLDB.Models;
+
 namespace LLLib
 {
     public interface IGameParticipantService

@@ -1,29 +1,36 @@
+using LLDB.Models;
+using LLDB.Repos;
+using System.Collections.Generic;
+
 namespace LLLib
 {
-    public class GameParticipant : IGameParticipantService
+    public class GameParticipantService : IGameParticipantService
     {
         private IGameParticipantRepo repo;
 
-        public GameParticipant(IGameParticipantRepo repo) {
+        public GameParticipantService(IGameParticipantRepo repo) {
             this.repo = repo;
         }
 
-        void AddGameParticipant(GameParticipant participant) {
+        public void AddGameParticipant(GameParticipant participant)
+        {
             repo.AddGameParticipant(participant);
         }
 
-        void UpdateGameParticipant(GameParticipant participant) {
+        public void UpdateGameParticipant(GameParticipant participant)
+        {
             repo.UpdateGameParticipant(participant);
         }
 
-        void DeleteGameParticipant(GameParticipant participant) {
+        public void DeleteGameParticipant(GameParticipant participant)
+        {
             repo.DeleteGameParticipant(participant);
         }
 
-        List<GameParticipant> GetAllGameParticipantsByGameId(int id) {
-            List<GameParticipant> participants = repo.GetAllGameParticipantsByGameId();
+        public List<GameParticipant> GetAllGameParticipantsByGameId(int id)
+        {
+            List<GameParticipant> participants = repo.GetAllGameParticipantsByGameId(id);
              return participants;
         }
-        
     }
 }

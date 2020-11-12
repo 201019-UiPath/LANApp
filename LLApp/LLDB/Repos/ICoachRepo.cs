@@ -6,7 +6,7 @@ using LLDB.Models;
 
 namespace LLDB.Repos
 {
-    interface ICoachRepo
+    public interface ICoachRepo
     {
         void AddCoach(Coach coach);
         void UpdateCoach(Coach coach);

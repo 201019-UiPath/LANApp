@@ -93,7 +93,7 @@ namespace LLAPI.Controllers
         {
             try
             {
-                return Ok(childService.GetAllChildrenByTeamId());
+                return Ok(childService.GetAllChildrenByTeamId(id));
             } catch (Exception)
             {
                 return StatusCode(500);

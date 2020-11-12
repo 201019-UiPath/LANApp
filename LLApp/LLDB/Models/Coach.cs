@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LLDB.Models
 {
-    class Coach
+    public class Coach
     {
         public int Id { get; set; }
 
