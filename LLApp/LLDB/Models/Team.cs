@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace LLDB.Models
 {
     public class Team
@@ -9,5 +11,7 @@ namespace LLDB.Models
         public List<Child> Roster { get; set; }
 
         public List<Game> Games { get; set; }
+
+        public List<Practice> Practices { get; set; }
     }
 }
