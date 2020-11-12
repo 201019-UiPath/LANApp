@@ -11,9 +11,6 @@ namespace LLDB.Models
 
         public Team Team { get; set; }
 
-        public DateTime Time { get; set; }
-
-        public List<Child> Participants { get; set; }
-        
+        public DateTime Time { get; set; }        
     }
 }

@@ -7,16 +7,8 @@ namespace LLDB.Models
     {
         public int GameId { get; set; }
 
-        public int Team1Id { get; set; }
-
-        public Team Team1 { get; set; }
-
-        public int Team2Id { get; set; }
-
-        public Team Team2 { get; set; }
+        public List<GameParticipant> GameParticipants { get; set; }
 
         public DateTime Time { get; set; }
-
-        public List<Child> Participants { get; set; }
     }
 }
