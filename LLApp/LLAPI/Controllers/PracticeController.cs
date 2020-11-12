@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LLDB.Models;
+using LLLib;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,23 +14,23 @@ namespace LLAPI.Controllers
     [ApiController]
     public class PracticeController : ControllerBase
     {
-        private readonly IPracticeService parentService;
+        private readonly IPracticeService practiceService;
 
-        public PracticeController(IPracticeService parentService)
+        public PracticeController(IPracticeService practiceService)
         {
-            this.parentService = parentService;
+            this.practiceService = practiceService;
         }
 
         [HttpPost("add")]
         [Consumes("application/json")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult AddParent(Parent parent)
+        public IActionResult AddPractice(Practice practice)
         {
             try
             {
-                parentService.AddParent(parent);
-                return CreatedAtAction("AddParent", parent);
+                practiceService.AddPractice(practice);
+                return CreatedAtAction("AddPractice", practice);
             }
             catch (Exception)
             {
@@ -39,12 +42,12 @@ namespace LLAPI.Controllers
         [Consumes("application/json")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult UpdateParent(Parent parent)
+        public IActionResult UpdatePractice(Practice practice)
         {
             try
             {
-                parentService.UpdateParent(parent);
-                return CreatedAtAction("UpdateParent", parent);
+                practiceService.UpdatePractice(practice);
+                return CreatedAtAction("UpdatePractice", practice);
             }
             catch (Exception)
             {
@@ -56,11 +59,11 @@ namespace LLAPI.Controllers
         [Consumes("application/json")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult DeleteParent(Parent parent)
+        public IActionResult DeletePractice(Practice practice)
         {
             try
             {
-                parentService.DeleteParent(parent);
+                practiceService.DeletePractice(practice);
                 return Ok();
             }
             catch (Exception)
@@ -69,28 +72,14 @@ namespace LLAPI.Controllers
             }
         }
 
-        [HttpGet("get")]
-        [Produces("application/json")]
-        [EnableCors("allowedOrigins")]
-        public IActionResult GetAllParents()
-        {
-            try
-            {
-                return Ok(parentService.GetAllParents());
-            } catch (Exception)
-            {
-                return StatusCode(500);
-            }
-        }
-
         [HttpGet("get/{id}")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult GetAllParentsByChildId(int id)
+        public IActionResult GetAllPracticesByTeamId(int id)
         {
             try
             {
-                return Ok(parentService.GetAllParentsByChildId(id));
+                return Ok(practiceService.GetAllPracticesByTeamId(id));
             } catch (Exception)
             {
                 return StatusCode(500);
