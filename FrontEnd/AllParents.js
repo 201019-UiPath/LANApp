@@ -4,19 +4,20 @@ function GetAllParents() {
     .then(response => response.json())
     .then(result => {
         document.querySelectorAll('#parents tbody tr').forEach(element => element.remove());
-        let table = document.querySelectorAll('#parents tbody');
+        let table = document.querySelector('#parents tbody');
 
-        for (let p = 0; p < result.length; ++p) {
+        for (let i = 0; i < result.length; i++) {
             let row = table.insertRow(table.rows.length);
 
             let pnCell = row.insertCell(0);
-            pnCell.innerHTML = result[p].Name;
+            pnCell.innerHTML = result[i].Name;
 
             let pCell = row.insertCell(1);
-            pCell.innerHTML = result[p].PhoneNumber;
+            pCell.innerHTML = result[i].PhoneNumber;
 
             let eCell = row.insertCell(2);
-            eCell.innerHTML = result[p].EmailAddress;
+            eCell.innerHTML = result[i].EmailAddress;
+            
         }
     });
 }
