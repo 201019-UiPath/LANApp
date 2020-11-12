@@ -20,52 +20,62 @@ namespace LLDB.Repos
 
         public void AddChild(Child child)
         {
-            throw new NotImplementedException();
+            context.Children.Add(child);
+            context.SaveChanges();
         }
 
         public void AddCoach(Coach coach)
         {
-            throw new NotImplementedException();
+            context.Coaches.Add(coach);
+            context.SaveChanges();
         }
 
         public void AddGame(Game game)
         {
-            throw new NotImplementedException();
+            context.Games.Add(game);
+            context.SaveChanges();
         }
 
         public void AddGameParticipant(GameParticipant participant)
         {
-            throw new NotImplementedException();
+            context.GameParticipants.Add(participant);
+            context.SaveChanges();
         }
 
         public void AddParent(Parent parent)
         {
-            throw new NotImplementedException();
+            context.Parents.Add(parent);
+            context.SaveChanges();
         }
 
         public void AddPractice(Practice practice)
         {
-            throw new NotImplementedException();
+            context.Practices.Add(practice);
+            context.SaveChanges();
         }
 
         public void AddTeam(Team team)
         {
-            throw new NotImplementedException();
+            context.Teams.Add(team);
+            context.SaveChanges();
         }
 
         public void DeleteChild(Child child)
         {
-            throw new NotImplementedException();
+            context.Children.Remove(child);
+            context.SaveChanges();
         }
 
         public void DeleteCoach(Coach coach)
         {
-            throw new NotImplementedException();
+            context.Coaches.Remove(coach);
+            context.SaveChanges();
         }
 
         public void DeleteGame(Game game)
         {
-            throw new NotImplementedException();
+            context.Games.Remove(game);
+            context.SaveChanges();
         }
 
         public void DeleteGameParticipant(GameParticipant participant)
@@ -116,6 +126,7 @@ namespace LLDB.Repos
         public List<Game> GetAllGamesByTeamId(int id)
         {
             throw new NotImplementedException();
+            //return context.Games.Include("GameParticipants").Where(x => x.GameParticipants.GameId == id).ToList();
         }
 
         public List<Parent> GetAllParents()
