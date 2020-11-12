@@ -8,13 +8,22 @@ namespace LLLib
             this.repo = repo;
         }
 
-        void AddGameParticipant(GameParticipant participant) {}
+        void AddGameParticipant(GameParticipant participant) {
+            repo.AddGameParticipant(participant);
+        }
 
-        void UpdateCoach(GameParticipant participant) {}
+        void UpdateGameParticipant(GameParticipant participant) {
+            repo.UpdateGameParticipant(participant);
+        }
 
-        void DeleteCoach(GameParticipant participant) {}
+        void DeleteGameParticipant(GameParticipant participant) {
+            repo.DeleteGameParticipant(participant);
+        }
 
-        List<GameParticipant> GetAllGameParticipantsByGameId(int id) {}
+        List<GameParticipant> GetAllGameParticipantsByGameId(int id) {
+            List<GameParticipant> participants = repo.GetAllGameParticipantsByGameId();
+             return participants;
+        }
         
     }
 }

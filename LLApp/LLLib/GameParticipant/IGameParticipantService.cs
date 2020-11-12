@@ -3,8 +3,8 @@ namespace LLLib
     public interface IGameParticipantService
     {
         void AddGameParticipant(GameParticipant participant);
-        void UpdateCoach(GameParticipant participant);
-        void DeleteCoach(GameParticipant participant);
+        void UpdateGameParticipant(GameParticipant participant);
+        void DeleteGameParticipant(GameParticipant participant);
         List<GameParticipant> GetAllGameParticipantsByGameId(int id);
          
     }
