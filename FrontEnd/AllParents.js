@@ -1,5 +1,5 @@
 function GetAllParents() {
-    
+
     fetch('https://localhost:44331/parent/get/')
     .then(response => response.json())
     .then(result => {
@@ -10,13 +10,13 @@ function GetAllParents() {
             let row = table.insertRow(table.rows.length);
 
             let pnCell = row.insertCell(0);
-            pnCell.innerHTML = result[p].parentName;
+            pnCell.innerHTML = result[p].Name;
 
             let pCell = row.insertCell(1);
-            pCell.innerHTML = result[p].phoneNumber;
+            pCell.innerHTML = result[p].PhoneNumber;
 
             let eCell = row.insertCell(2);
-            eCell.innerHTML = result[p].email;
+            eCell.innerHTML = result[p].EmailAddress;
         }
     });
 }
