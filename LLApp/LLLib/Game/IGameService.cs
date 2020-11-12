@@ -1,3 +1,7 @@
+using System;
+using LLDB.Models;
+using System.Collections.Generic;
+
 namespace LLLib.Game
 {
     public interface IGameService
