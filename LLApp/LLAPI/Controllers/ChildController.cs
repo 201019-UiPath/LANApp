@@ -37,6 +37,40 @@ namespace LLAPI.Controllers
             }
         }
 
+        [HttpPut("edit")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [EnableCors("allowedOrigins")]
+        public IActionResult UpdateChild(Child child)
+        {
+            try
+            {
+                //childService.UpdateChild(child);
+                return CreatedAtAction("UpdateChild", child);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpDelete("delete")]
+        [Consumes("application/json")]
+        [Produces("application/json")]
+        [EnableCors("allowedOrigins")]
+        public IActionResult DeleteChild(Child child)
+        {
+            try
+            {
+                //childService.DeleteChild(child);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+
 
 
 
