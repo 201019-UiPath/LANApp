@@ -1,16 +1,16 @@
-using LLDB.Models;
-using System;
-using System.Collections.Generic;
+// using LLDB.Models;
+// using System;
+// using System.Collections.Generic;
 
-namespace LLLib.Child
-{
-    public interface IChildService
-    {
-         void AddChild(Child child);
-         void UpdateChild(Child child);
-         void DeleteChild(Child child);
-         List<Child> GetAllChildren();
-         Child GetChildByTeamId(int id);
-         List<Child> GetAllChildrenByTeamId(int id);
-    }
-}
+// namespace LLLib.Child
+// {
+//     public interface IChildService
+//     {
+//          void AddChild(Child child);
+//          void UpdateChild(Child child);
+//          void DeleteChild(Child child);
+//          List<Child> GetAllChildren();
+//          Child GetChildByTeamId(int id);
+//          List<Child> GetAllChildrenByTeamId(int id);
+//     }
+// }

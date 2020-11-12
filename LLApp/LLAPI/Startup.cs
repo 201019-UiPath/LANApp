@@ -10,7 +10,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LLLib;
 
 namespace LLAPI
 {
@@ -44,20 +43,20 @@ namespace LLAPI
             //TODO change this to the correct context name
             //services.AddDbContext<ContextHere>(options => options.UseNpgsql(Configuration.GetConnectionString("")));
 
-            services.AddScoped<IChildService, ChildService>();
-            services.AddScoped<IChildRepo, DBRepo>();
+            // services.AddScoped<IChildService, ChildService>();
+            // services.AddScoped<IChildRepo, DBRepo>();
 
-            services.AddScoped<IGameService, GameService>();
-            services.AddScoped<IGameRepo, DBRepo>();
+            // services.AddScoped<IGameService, GameService>();
+            // services.AddScoped<IGameRepo, DBRepo>();
 
-            services.AddScoped<IParentService, ParentService>();
-            services.AddScoped<IParentRepo, DBRepo>();
+            // services.AddScoped<IParentService, ParentService>();
+            // services.AddScoped<IParentRepo, DBRepo>();
 
-            services.AddScoped<IPracticeService, PracticeService>();
-            services.AddScoped<IPracticeRepo, DBRepo>();
+            // services.AddScoped<IPracticeService, PracticeService>();
+            // services.AddScoped<IPracticeRepo, DBRepo>();
 
-            services.AddScoped<ITeamService, TeamService>();
-            services.AddScoped<ITeamRepo, DBRepo>();
+            // services.AddScoped<ITeamService, TeamService>();
+            // services.AddScoped<ITeamRepo, DBRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

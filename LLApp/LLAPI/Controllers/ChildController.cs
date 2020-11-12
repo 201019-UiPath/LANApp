@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using LLLib;
-using LLLib.Child;
 using LLDB.Models;
 using Microsoft.AspNetCore.Cors;
 
@@ -15,12 +13,12 @@ namespace LLAPI.Controllers
     [ApiController]
     public class ChildController : ControllerBase
     {
-        private readonly IChildService childService;
+        // private readonly IChildService childService;
 
-        public ChildController(IChildService childService)
-        {
-            this.childService = childService;
-        }
+        // public ChildController(IChildService childService)
+        // {
+        //     this.childService = childService;
+        // }
 
         [HttpPost("add")]
         [Consumes("application/json")]
