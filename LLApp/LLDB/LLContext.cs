@@ -25,7 +25,11 @@ namespace LLDB
         public DbSet<Practice> Practices { get; set; }
 
         public DbSet<Game> Games { get; set; }
-        
+
+        public DbSet<GameParticipant> GameParticipants { get; set; }
+
+        public DbSet<Coach> Coaches { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
             if (!optionsBuilder.IsConfigured) {
                 var configuration = new ConfigurationBuilder()
