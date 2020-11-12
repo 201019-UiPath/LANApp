@@ -1,5 +1,5 @@
 function GetAllParents() {
-    fetch('')
+    fetch('https://localhost:44331/get')
         .then(response => response.json())
         .then(result => {
             document.querySelectorAll('#parents tbody tr').forEach(element => element.remove())
