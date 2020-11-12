@@ -1,6 +1,7 @@
 ﻿using System;
 using LLDB.Models;
 using System.Collections.Generic;
+using LLDB.Repos;
 
 namespace LLLib
 {
@@ -35,7 +36,7 @@ namespace LLLib
          }    
 
          public List<Child> GetAllChildrenByTeamId(int id) {
-             List<Child> child = repo.GetAllChildrenByTeamId();
+             List<Child> child = repo.GetAllChildrenByTeamId(id);
              return child;
          }   
 
