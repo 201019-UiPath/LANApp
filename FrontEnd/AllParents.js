@@ -1,7 +1,7 @@
 function GetAllParents() {
-    fetch('https://localhost:44331/get')
-        .then(response => response.json())
-        .then(result => {
+    fetch('https://localhost:44331/get/')
+    .then(response => response.json())
+    .then(result => {
             document.querySelectorAll('#parents tbody tr').forEach(element => element.remove())
             let table = document.querySelectorAll('#parents tbody');
             for (let p = 0; p < result.length; ++p) {
@@ -18,6 +18,7 @@ function GetAllParents() {
             }
         });
 }
+
 function AddParent()
 {
     let parent = {};
@@ -36,7 +37,7 @@ function AddParent()
             GetAllParents();
         }
     };
-    xhr.open("Post", 'idk yet', true);
+    xhr.open("Post", 'https://localhost:44331/add/', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(parent));
 }
