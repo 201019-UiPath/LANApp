@@ -11,6 +11,13 @@ namespace LLDB.Repos
 {
     class DBRepo : IChildRepo, IParentRepo, ICoachRepo, ITeamRepo, IPracticeRepo, IGameRepo, IGameParticipantRepo
     {
+        private LLContext context;
+
+        public DBRepo(LLContext context)
+        {
+            this.context = context;
+        }
+
         public void AddChild(Child child)
         {
             throw new NotImplementedException();
@@ -83,27 +90,27 @@ namespace LLDB.Repos
 
         public List<Child> GetAllChildren()
         {
-            throw new NotImplementedException();
+            return context.Children.Select(x => x).ToList();
         }
 
         public List<Child> GetAllChildrenByTeamId(int id)
         {
-            throw new NotImplementedException();
+            return context.Children.Where(x => x.TeamId == id).ToList();
         }
 
         public List<Coach> GetAllCoaches()
         {
-            throw new NotImplementedException();
+            return context.Coaches.Select(x => x).ToList();
         }
 
         public List<GameParticipant> GetAllGameParticipantsByGameId(int id)
         {
-            throw new NotImplementedException();
+            return context.GameParticipants.Where(x => x.GameId == id).ToList();
         }
 
         public List<Game> GetAllGames()
         {
-            throw new NotImplementedException();
+            return context.Games.Select(x => x).ToList();
         }
 
         public List<Game> GetAllGamesByTeamId(int id)
@@ -113,7 +120,7 @@ namespace LLDB.Repos
 
         public List<Parent> GetAllParents()
         {
-            throw new NotImplementedException();
+            return context.Parents.Select(x => x).ToList();
         }
 
         public List<Parent> GetAllParentsByChildId(int id)
@@ -123,12 +130,12 @@ namespace LLDB.Repos
 
         public List<Practice> GetAllPracticesByTeamId(int id)
         {
-            throw new NotImplementedException();
+            return context.Practices.Where(x => x.TeamId == id).ToList();
         }
 
         public List<Team> GetAllTeams()
         {
-            throw new NotImplementedException();
+            return context.Teams.Select(x => x).ToList();
         }
 
         public Child GetChildByTeamId(int id)
