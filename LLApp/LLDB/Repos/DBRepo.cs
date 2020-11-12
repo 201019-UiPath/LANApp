@@ -80,22 +80,26 @@ namespace LLDB.Repos
 
         public void DeleteGameParticipant(GameParticipant participant)
         {
-            throw new NotImplementedException();
+            context.GameParticipants.Remove(participant);
+            context.SaveChanges();
         }
 
         public void DeleteParent(Parent parent)
         {
-            throw new NotImplementedException();
+            context.Parents.Remove(parent);
+            context.SaveChanges();
         }
 
         public void DeletePractice(Practice practice)
         {
-            throw new NotImplementedException();
+            context.Practices.Remove(practice);
+            context.SaveChanges();
         }
 
         public void DeleteTeam(Team team)
         {
-            throw new NotImplementedException();
+            context.Teams.Remove(team);
+            context.SaveChanges();
         }
 
         public List<Child> GetAllChildren()
