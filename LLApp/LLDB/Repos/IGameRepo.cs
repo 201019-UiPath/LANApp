@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+
 using LLDB.Models;
 
 namespace LLDB.Repos
 {
-    interface IGameRepo
+    public interface IGameRepo
     {
         void AddGame(Game game);
         void UpdateGame(Game game);
