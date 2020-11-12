@@ -30,7 +30,7 @@ namespace LLLib
              return game;
          }
 
-         public List<Game> GetAllGamesByTeamId(ints id) {
+         public List<Game> GetAllGamesByTeamId(int id) {
              List<Game> game = repo.GetAllGamesByTeamId();
              return game;
          }   
