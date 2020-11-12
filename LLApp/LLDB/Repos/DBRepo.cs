@@ -9,7 +9,7 @@ using LLDB.Models;
 
 namespace LLDB.Repos
 {
-    class DBRepo : IChildRepo, IParentRepo, ICoachRepo, ITeamRepo, IPracticeRepo, IGameRepo, IGameParticipantRepo
+    public class DBRepo : IChildRepo, IParentRepo, ICoachRepo, ITeamRepo, IPracticeRepo, IGameRepo, IGameParticipantRepo
     {
         private LLContext context;
 
