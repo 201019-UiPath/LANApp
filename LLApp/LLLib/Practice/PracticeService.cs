@@ -26,7 +26,7 @@ namespace LLLib
          }
 
          public List<Practice> GetAllPracticesByTeamId(int id) {
-             List<Practice> practice = repo.GetAllPracticesByTeamId();
+             List<Practice> practice = repo.GetAllPracticesByTeamId(id);
              return practice;
          }
         

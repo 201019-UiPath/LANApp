@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using LLDB.Models;
 
 namespace LLDB.Repos
 {
-    interface IParentRepo
+    public interface IParentRepo
     {
         void AddParent(Parent parent);
-        void UpdateParent(Parent parent);
-        void DeleteParent(Parent parent);
-        List<Parent> GetAllParents();
-        List<Parent> GetParentsByChildId(int id);
+         void UpdateParent(Parent parent);
+         void DeleteParent(Parent parent);
+         List<Parent> GetAllParents();
+         List<Parent> GetAllParentsByChildId(int id);        
     }
 }

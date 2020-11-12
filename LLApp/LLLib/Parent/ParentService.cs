@@ -31,7 +31,7 @@ namespace LLLib
          }
 
          public List<Parent> GetAllParentsByChildId(int id) {
-             List<Parent> parent = repo.GetAllParentsByChildId();
+             List<Parent> parent = repo.GetAllParentsByChildId(id);
              return parent;
          }
 

@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-
 using LLDB.Models;
 
 namespace LLDB.Repos

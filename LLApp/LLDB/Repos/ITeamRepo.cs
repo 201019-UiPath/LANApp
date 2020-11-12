@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using LLDB.Models;
 
 namespace LLDB.Repos
 {
-    interface ITeamRepo
+    public interface ITeamRepo
     {
         void AddTeam(Team team);
         void UpdateTeam(Team team);
