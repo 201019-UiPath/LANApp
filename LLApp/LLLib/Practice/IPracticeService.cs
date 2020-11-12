@@ -1,3 +1,7 @@
+using System;
+using LLDB.Models;
+using System.Collections.Generic;
+
 namespace LLLib.Practice
 {
     public interface IPracticeService
