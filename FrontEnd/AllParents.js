@@ -1,4 +1,5 @@
 function GetAllParents() {
+    
     fetch('https://localhost:44331/parent/get/')
     .then(response => response.json())
     .then(result => {
@@ -23,9 +24,9 @@ function GetAllParents() {
 function AddParent()
 {
     let parent = {};
-    parent.parentName = document.querySelector('#parentName').value;
-    parent.phoneNumber = document.querySelector('#phoneNumber').value;
-    parent.email = document.querySelector('#email').value;
+    parent.Name = document.querySelector('#parentName').value;
+    parent.PhoneNumber = document.querySelector('#phoneNumber').value;
+    parent.EmailAddress = document.querySelector('#email').value;
 
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -38,7 +39,8 @@ function AddParent()
             GetAllParents();
         }
     };
-    xhr.open("Post", 'https://localhost:44331/add/', true);
+
+    xhr.open("Post", 'https://localhost:44331/parent/add/', true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send(JSON.stringify(parent));
 }
