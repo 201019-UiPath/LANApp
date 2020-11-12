@@ -143,6 +143,11 @@ namespace LLDB.Repos
             throw new NotImplementedException();
         }
 
+        public List<Child> GetAllChildrenByParentId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Practice> GetAllPracticesByTeamId(int id)
         {
             return context.Practices.Where(x => x.TeamId == id).ToList();
