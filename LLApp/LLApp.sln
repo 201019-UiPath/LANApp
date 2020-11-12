@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LLAPI", "LLApp\LLAPI.csproj", "{6A4A22A8-F3D6-430D-B56C-7B673C5EB621}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LLDB", "LLDB\LLDB.csproj", "{2E4007FB-5A62-44D2-B374-2D969EA45056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LLDB", "LLDB\LLDB.csproj", "{2E4007FB-5A62-44D2-B374-2D969EA45056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LLAPI", "LLAPI\LLAPI.csproj", "{2BEE5C3F-2380-421A-9BC6-B983392E4B5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6A4A22A8-F3D6-430D-B56C-7B673C5EB621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A4A22A8-F3D6-430D-B56C-7B673C5EB621}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A4A22A8-F3D6-430D-B56C-7B673C5EB621}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A4A22A8-F3D6-430D-B56C-7B673C5EB621}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E4007FB-5A62-44D2-B374-2D969EA45056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E4007FB-5A62-44D2-B374-2D969EA45056}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4007FB-5A62-44D2-B374-2D969EA45056}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4007FB-5A62-44D2-B374-2D969EA45056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BEE5C3F-2380-421A-9BC6-B983392E4B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BEE5C3F-2380-421A-9BC6-B983392E4B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BEE5C3F-2380-421A-9BC6-B983392E4B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BEE5C3F-2380-421A-9BC6-B983392E4B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LLApp.Controllers
+namespace LLAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

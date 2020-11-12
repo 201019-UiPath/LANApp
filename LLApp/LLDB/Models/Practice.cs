@@ -9,6 +9,8 @@ namespace LLDB.Models
 
         public int TeamId { get; set; }
 
+        public Team Team { get; set; }
+
         public DateTime Time { get; set; }
 
         public List<Child> Participants { get; set; }
