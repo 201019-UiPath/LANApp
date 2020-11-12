@@ -4,15 +4,15 @@ using System.IO;
 
 using LLDB.Models;
 
-namespace StoreDB
+namespace LLDB
 {
-    public class StoreContext : DbContext
+    public class LLContext : DbContext
     {
-        public StoreContext()
+        public LLContext()
         {
         }
 
-        public StoreContext(DbContextOptions<StoreContext> options) : base(options)
+        public LLContext(DbContextOptions<LLContext> options) : base(options)
         {
         }
         
