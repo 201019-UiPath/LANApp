@@ -45,7 +45,7 @@ namespace LLAPI
             services.AddControllers();
 
             //TODO change this to the correct context name
-            services.AddDbContext<LLContext>(options => options.UseNpgsql(Configuration.GetConnectionString("")));
+            services.AddDbContext<LLContext>(options => options.UseNpgsql(Configuration.GetConnectionString("LLContext")));
 
             services.AddScoped<IChildService, ChildService>();
             services.AddScoped<IChildRepo, DBRepo>();
