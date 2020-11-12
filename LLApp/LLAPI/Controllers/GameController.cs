@@ -76,34 +76,34 @@ namespace LLAPI.Controllers
         }
 
 
-        // [HttpGet("get")]
-        // [Produces("application/json")]
-        // [EnableCors("allowedOrigins")]
-        // public IActionResult GetAllChildren()
-        // {
-        //     try
-        //     {
-        //         return Ok(gameService.GetAllChildren());
-        //     } catch (Exception)
-        //     {
-        //         return StatusCode(500);
-        //     }
-        // }
+        [HttpGet("get")]
+        [Produces("application/json")]
+        [EnableCors("allowedOrigins")]
+        public IActionResult GetAllGames()
+        {
+            try
+            {
+                return Ok(gameService.GetAllGames());
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
 
 
-        // [HttpGet("get/{id}")]
-        // [Produces("application/json")]
-        // [EnableCors("allowedOrigins")]
-        // public IActionResult GetAllChildrenByTeamId(int id)
-        // {
-        //     try
-        //     {
-        //         return Ok(gameService.GetAllChildrenByTeamId(id));
-        //     } catch (Exception)
-        //     {
-        //         return StatusCode(500);
-        //     }
-        // }
+        [HttpGet("get/{id}")]
+        [Produces("application/json")]
+        [EnableCors("allowedOrigins")]
+        public IActionResult GetAllGamesByTeamId(int id)
+        {
+            try
+            {
+                return Ok(gameService.GetAllGamesByTeamId(id));
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
+        }
 
 
 
