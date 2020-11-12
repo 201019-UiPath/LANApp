@@ -156,37 +156,44 @@ namespace LLDB.Repos
 
         public void UpdateChild(Child child)
         {
-            throw new NotImplementedException();
+            context.Children.Update(child);
+            context.SaveChanges();
         }
 
         public void UpdateCoach(Coach coach)
         {
-            throw new NotImplementedException();
+            context.Coaches.Update(coach);
+            context.SaveChanges();
         }
 
         public void UpdateGame(Game game)
         {
-            throw new NotImplementedException();
+            context.Games.Update(game);
+            context.SaveChanges();
         }
 
         public void UpdateGameParticipant(GameParticipant participant)
         {
-            throw new NotImplementedException();
+            context.GameParticipants.Update(participant);
+            context.SaveChanges();
         }
 
         public void UpdateParent(Parent parent)
         {
-            throw new NotImplementedException();
+            context.Parents.Update(parent);
+            context.SaveChanges();
         }
 
         public void UpdatePractice(Practice practice)
         {
-            throw new NotImplementedException();
+            context.Practices.Update(practice);
+            context.SaveChanges();
         }
 
         public void UpdateTeam(Team team)
         {
-            throw new NotImplementedException();
+            context.Teams.Update(team);
+            context.SaveChanges();
         }
     }
 }
