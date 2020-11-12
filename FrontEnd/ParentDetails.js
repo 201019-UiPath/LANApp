@@ -30,7 +30,7 @@ function AddKid() {
 
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status > 199 this.status < 300;)
+        if (this.readyState == 4 && this.status > 199 && this.status < 300)
         {
             alert("New kid added!");
             document.querySelector('#kidName').value = '';

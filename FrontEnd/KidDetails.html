@@ -3,9 +3,49 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Hockey Little League</title>
+    <link rel="stylesheet" href="" />
+    <script src="KidDetails.js"></script>
 </head>
 <body>
-
+    <h1 class="jumbotron">This is the kid editing page</h1>
+    <div class="container">
+        <form action="EditKid">
+            <div class="form-group">
+                <label for="kidName">Kid's Name:</label>
+                <input type="text" class="form-group" id="kidName" placeholder="Enter kid's name" />
+            </div>
+            <div class="form-group">
+                <label for="teamName">Team Name:</label>
+                <input type="text" class="form-group" id="teamName" placeholder="Enter team name" />
+            </div>
+            <div class="form-group">
+                <label for="practice">Practice:</label>
+                <input type="datetime" class="form-group" id="practice" placeholder="Enter Practice" />
+            </div>
+            <div class="form-group">
+                <label for="game">Game:</label>
+                <input type="datetime" class="form-group" id="game" placeholder="Enter Game" />
+            </div>
+            <input type="button" value="Edit Kid" class="btn btn-button" onclick="GetKid()" />
+        </form>
+    </div>
+    <div class="container">
+        <table class="table" id="kid">
+            <thead>
+                <th>Kid Name</th>
+                <th>Team Name</th>
+                <th>Practice</th>
+                <th>Game</th>
+            </thead>
+            <tbody>
+                <td><div contenteditable>Kid Name</div></td>
+                <td><div contenteditable>Team Name</div></td>
+                <td>Practice</td>
+                <td>Game</td>
+            </tbody>
+        </table>
+        <input type="button" value="Edit Kid" class="btn btn-button" onclick="EditKid()" />
+    </div>
 </body>
 </html>

@@ -31,14 +31,14 @@ function EditKid() {
 
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status > 199 this.status < 300;)
+        if (this.readyState == 4 && this.status > 199 && this.status < 300)
         {
-            alert("New kid added!");
+            alert("Kid edited");
             document.querySelector('#kidName').value = '';
             document.querySelector('#teamName').value = '';
             document.querySelector('#practice').value = '';
             document.querySelector('#game').value = '';
-            GetKids();
+            GetKid();
         }
     };
     xhr.open("Post", 'idk yet', true);

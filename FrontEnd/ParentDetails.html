@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="" />
     <script src="ParentDetails.js"></script>
 </head>
-<body onload="GetKids()">
+<body>
     <h1 class="jumbotron">This is the parent page</h1>
     <div class="container">
         <form action="AddKid">
@@ -27,7 +27,7 @@
                 <label for="game">Game:</label>
                 <input type="datetime" class="form-group" id="game" placeholder="Enter Game" />
             </div>
-            <input type="button" value="Add Kid" class="btn btn-button" onclick="GetAllKids()" />
+            <input type="button" value="Add Kid" class="btn btn-button" onclick="GetKids()" />
         </form>
     </div>
     <div class="container">
@@ -45,7 +45,7 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td><input type="button" value="Edit Kid" class="btn btn-button" onclick="GetKid()" /></td>
                 </tr>
             </tbody>
         </table>
