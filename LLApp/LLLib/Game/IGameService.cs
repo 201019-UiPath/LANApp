@@ -5,8 +5,7 @@ namespace LLLib.Game
          void AddGame(Game game);
          void UpdateGame(Game game);
          void DeleteGame(Game game);
-         List<Child> GetAllChildren();
-         Child GetChildByTeamId(int id);
-         List<Child> GetAllChildrenByTeamId(int id);
+         List<Game> GetAllGames();
+         List<Game> GetAllGamesByTeamId(int id);
     }
 }

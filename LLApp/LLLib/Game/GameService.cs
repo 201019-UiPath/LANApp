@@ -11,7 +11,7 @@ namespace LLLib
         }
 
         public void AddGame(Game game) {
-            repo.AddBook(game);
+            repo.AddGame(game);
         }
 
         public void UpdateGame(Game game) {
@@ -22,19 +22,14 @@ namespace LLLib
              repo.DeleteGame(child);
          }
 
-         public List<Child> GetAllChildren() {
-             List<Child> child = repo.GetAllChildren();
-             return child;
+         public List<Game> GetAllGames() {
+             List<Game> game = repo.GetAllGames();
+             return game;
          }
 
-        public Child GetChildByTeamId(int id) {
-             Child child = repo.GetChildByTeamId(id);
-             return child;
-         }    
-
-         public List<Child> GetAllChildrenByTeamId(ints id) {
-             List<Child> child = repo.GetAllChildrenByTeamId();
-             return child;
+         public List<Game> GetAllGamesByTeamId(ints id) {
+             List<Game> game = repo.GetAllGamesByTeamId();
+             return game;
          }   
 
     }
