@@ -19,7 +19,7 @@ namespace LLLib
          }
 
          public void DeleteGame(Game game) {
-             repo.DeleteGame(child);
+             repo.DeleteGame(game);
          }
 
          public List<Game> GetAllGames() {
