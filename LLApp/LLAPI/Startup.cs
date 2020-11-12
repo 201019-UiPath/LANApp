@@ -1,9 +1,11 @@
+using LLDB;
 using LLDB.Repos;
 using LLLib;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -43,7 +45,7 @@ namespace LLAPI
             services.AddControllers();
 
             //TODO change this to the correct context name
-            //services.AddDbContext<ContextHere>(options => options.UseNpgsql(Configuration.GetConnectionString("")));
+            services.AddDbContext<LLContext>(options => options.UseNpgsql(Configuration.GetConnectionString("")));
 
             services.AddScoped<IChildService, ChildService>();
             services.AddScoped<IChildRepo, DBRepo>();
