@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hockey Little League</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="Kids.js"></script>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <div class="row justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html">CF Little League App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="../index.html">Home</a>
+            <a class="nav-link" href="../Parents/Parents.html">Parents <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="Kids.html">Kids</a>
+          </div>
+        </div>
+    </nav>
+    </div>
+
+    <section class='container-style'>
+        <input type="button" value="Get Kids" class="btn btn-light" onclick="GetKids()">
+    
+
+        <div class="container">
+            <table class="table" id="kids">
+                <thead>
+                    <th>Kid Name</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class='kids-container'>
+            <img id="kids-image" src="../images/enforcer.jpg" alt="enforcer" />
+        <div class="container">
+            <form action="AddKid">
+                <div class="form-group">
+                    <label for="kidName">Kid's Name:</label>
+                    <input type="text" class="form-group" id="kidName" placeholder="Enter kid's name" />
+                </div>
+                <input type="button" value="Add Kid" class="btn btn-light" onclick="AddKid()" />
+            </form>
+        </div>
+        </section>
+    </section>
+
+    
+</body>
+</html>
