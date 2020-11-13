@@ -86,14 +86,14 @@ namespace LLAPI.Controllers
             }
         }
 
-        [HttpGet("get/{id}")]
+        [HttpGet("get/{ParentId}")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult GetAllParentsByChildId(int id)
+        public IActionResult GetParentById(int ParentId)
         {
             try
             {
-                return Ok(parentService.GetAllParentsByChildId(id));
+                return Ok(parentService.GetParentById(ParentId));
             } catch (Exception)
             {
                 return StatusCode(500);

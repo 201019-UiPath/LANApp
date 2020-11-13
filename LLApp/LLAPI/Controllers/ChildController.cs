@@ -89,11 +89,11 @@ namespace LLAPI.Controllers
         [HttpGet("get/{parentId}")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
-        public IActionResult GetAllChildrenByParentId(int id)
+        public IActionResult GetAllChildrenByParentId(int ParentId)
         {
             try
             {
-                return Ok(childService.GetAllChildrenByParentId(id));
+                return Ok(childService.GetAllChildrenByParentId(ParentId));
             } catch (Exception)
             {
                 return StatusCode(500);
@@ -102,7 +102,7 @@ namespace LLAPI.Controllers
 
 
 
-        [HttpGet("get/{id}")]
+        [HttpGet("getteam/{id}")]
         [Produces("application/json")]
         [EnableCors("allowedOrigins")]
         public IActionResult GetAllChildrenByTeamId(int id)

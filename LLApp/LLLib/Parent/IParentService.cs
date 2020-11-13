@@ -11,5 +11,6 @@ namespace LLLib
          void DeleteParent(Parent parent);
          List<Parent> GetAllParents();
          List<Parent> GetAllParentsByChildId(int id);
+         Parent GetParentById(int id);
     }
 }

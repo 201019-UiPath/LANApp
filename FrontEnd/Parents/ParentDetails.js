@@ -1,5 +1,22 @@
+// let parent = localStorage[parent];
+const tempParent = localStorage.getItem('parent');
+
+console.log(tempParent.Name);
+
+// window.onload = function () {
+//     var url = document.location.href,
+//         params = url.split('?')[1].split('&'),
+//         data = {}, tmp;
+//     for (var i = 0, l = params.length; i < l; i++) {
+//          tmp = params[i].split('=');
+//          data[tmp[0]] = tmp[1];
+//     }
+//     document.getElementById('here').innerHTML = data.name;
+// }
+
+
 function GetKids() {
-    fetch('')
+    fetch(`https://localhost:44331/child/get/${parent.ParentId}`)
         .then(response => response.json())
         .then(result => {
             document.querySelectorAll('#kids tbody tr').forEach(element => element.remove())
@@ -21,6 +38,8 @@ function GetKids() {
             }
         });
 }
+
+
 function AddKid() {
     let kid = {};
     kid.kidName = document.querySelector('#kidName').value;

@@ -9,6 +9,7 @@ namespace LLDB.Repos
          void UpdateParent(Parent parent);
          void DeleteParent(Parent parent);
          List<Parent> GetAllParents();
-         List<Parent> GetAllParentsByChildId(int id);        
+         List<Parent> GetAllParentsByChildId(int id);
+         Parent GetParentById(int id);
     }
 }

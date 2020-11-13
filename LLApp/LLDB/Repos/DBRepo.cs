@@ -145,7 +145,7 @@ namespace LLDB.Repos
 
         public List<Child> GetAllChildrenByParentId(int id)
         {
-            throw new NotImplementedException();
+            return context.Children.Where(x => x.ParentId == id).ToList();
         }
 
         public List<Practice> GetAllPracticesByTeamId(int id)
@@ -161,6 +161,12 @@ namespace LLDB.Repos
         public Child GetChildByTeamId(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public Parent GetParentById(int id)
+        {
+            Parent p = context.Parents.Single(x => x.ParentId == id);
+            return (Parent) context.Parents.Single(x => x.ParentId == id);
         }
 
         public void UpdateChild(Child child)
