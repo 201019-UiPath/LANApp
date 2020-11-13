@@ -24,10 +24,12 @@ function GetAllParents() {
             let btn = document.createElement('input');
             btn.type = 'button';
             btn.value = 'Select';
+            btn.setAttribute("parentId", result[i].parentId);
 
             btn.onclick = function GetKid() {
                 console.log(buttonId);
-                fetch(`https://localhost:44331/child/get/${id}`)
+                console.log(btn.getAttribute("parentid"));
+                fetch(`https://localhost:44331/child/get/${btn.getAttribute("parentId")}`)
                 .then(response => response.json())
                 .then(result => {
                     document.querySelectorAll('#kids tbody tr').forEach(element => element.remove());
@@ -37,11 +39,18 @@ function GetAllParents() {
                     for(let i = 0; i < result.length; ++i) {
                         let row = table.insertRow(table.rows.length);
 
+                        row.onclick = function SetKid() {
+                            localStorage.setItem("child", JSON.stringify(result[i]));
+                        }
+
                         let kidNameCell = row.insertCell(0);
                         kidNameCell.innerHTML = result[i].name;
 
-                        let kidTeamCell = row.insertCell(1);
-                        kidTeamCell.innerHTML = result[i].phoneNumber;
+                        let kidLinkCell = row.insertCell(1);
+                        kidLink = document.createElement("a");
+                        kidLink.setAttribute("href", "../Kids/KidDetails.html");
+                        kidLink.innerHTML = `Go to ${result[i].name}'s practice schedule`;
+                        kidLinkCell.appendChild(kidLink);
                     }
                 });
             }   
@@ -86,10 +95,20 @@ function GetKids() {
         for (let i = 0; i < result.length; ++i) {
             let row = table.insertRow(table.rows.length);
             
+            row.onclick = function SetKid() {
+                localStorage.setItem("child", JSON.stringify(result[i]));
+            }
+
             let kidNameCell = row.insertCell(0);
             kidNameCell.innerHTML = result[i].name;
-            }
-        });
+
+            let kidLinkCell = row.insertCell(1);
+            kidLink = document.createElement("a");
+            kidLink.setAttribute("href", "../Kids/KidDetails.html");
+            kidLink.innerHTML = `Go to ${result[i].name}'s practice schedule`;
+            kidLinkCell.appendChild(kidLink);
+        }
+    });
 }
 
 function AddKid() {
