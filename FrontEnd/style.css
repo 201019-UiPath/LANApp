@@ -1,0 +1,123 @@
+.jumbotron {
+	background-image: url("images/banner.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: #b48608;
+	font-family: "Droid serif", serif;
+	font-size: 50px;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 44px;
+	margin: 0 0 12px;
+	text-align: center;
+	text-shadow: 0 0 3px #ff0000;
+}
+
+.container-home-style {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 80%;
+	box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.2),
+		0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12);
+	margin: -2% 10%;
+	padding: 1% 3% 3% 3%;
+	z-index: 5px;
+	position: relative;
+	background-color: white;
+	border-radius: 5px;
+}
+
+h4 {
+	font-size: 30px;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.container-home-style img {
+	max-width: 30%;
+	margin: 2% 2% 0% 2%;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+		0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+}
+
+.nav-container {
+	margin: 1% 2%;
+}
+
+p {
+	text-align: center;
+	color: black;
+	font-family: "Droid Sans", sans-serif;
+	font-size: 20px;
+	font-weight: 525;
+	line-height: 24px;
+	margin: 0 0 14px;
+	line-height: 1.6;
+}
+
+h4 {
+	text-align: center;
+	margin-top: 4%;
+	font-weight: 600;
+}
+
+.navbar {
+	border-bottom: solid;
+}
+
+.container-style {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 80%;
+	box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.2),
+		0 9px 12px 1px rgba(0, 0, 0, 0.14), 0 3px 16px 2px rgba(0, 0, 0, 0.12);
+	margin: 2% 10%;
+	padding: 1% 3% 3% 3%;
+	z-index: 5px;
+	position: relative;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.btn {
+	background-color: #e7e7e7;
+	color: black;
+}
+
+.container {
+	margin-top: 1%;
+}
+
+#kids-image {
+	max-width: 40%;
+	margin: 0 5%;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+		0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+}
+
+#parents-image {
+	max-width: 30%;
+	margin: 2% 2% 5%;
+	box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+		0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+	border-radius: 5px;
+}
+
+.kids-container {
+	display: flex;
+	flex-direction: row-reverse;
+	max-width: 50%;
+	margin-left: 22%;
+}
+
+.parents-container {
+	display: flex;
+	flex-direction: row;
+	max-width: 100%;
+	align-self: flex-start;
+}

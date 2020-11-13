@@ -35,5 +35,11 @@ namespace LLLib
              return parent;
          }
 
+        public Parent GetParentById(int id)
+        {
+            Parent parent = repo.GetParentById(id);
+            return parent;
+        }
+
     }
 }
